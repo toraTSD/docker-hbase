@@ -45,7 +45,7 @@ ENV TERM=xterm
 USER root
 
 # Install hbase
-RUN curl -fLs http://apache.org/dist/hbase/${HBASE_VER}/hbase-${HBASE_VER}-bin.tar.gz | tar xzf - -C /opt && mv /opt/hbase-${HBASE_VER} /opt/hbase
+RUN curl -fLs http://archive.apache.org/dist/hbase/${HBASE_VER}/hbase-${HBASE_VER}-bin.tar.gz | tar xzf - -C /opt && mv /opt/hbase-${HBASE_VER} /opt/hbase
 
 # Add HBASE to path
 ENV PATH=/opt/hbase/bin:$PATH
